@@ -33,7 +33,7 @@ I decided how a bug was really fixed through my gameplay of the app and seeing i
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
 - What change did you make that finally gave the game a stable secret number?
 
----
+In the original app, the secret number was regenerating everytime the user did a button click on submit since it was not properly stored in Streamlit's session state. I would explain Streamlit "reruns" as a website that is changing and rewinding from the beginning everythime your interact with it. That will essentially be the concept of a rerun in which the whole code is running from top to bottom and where the variables are constantly changing as you continue to interact with the website. The change that I made to give the game a stable secret number was integrating Streamlit's session state to consistently follow the secret number through reruns. Specifically, instead of generating a random secret every time, I added a check to only set st.session_state.secret if it already didn't exist in the session already.
 
 ## 5. Looking ahead: your developer habits
 
@@ -41,3 +41,5 @@ I decided how a bug was really fixed through my gameplay of the app and seeing i
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+One habit that I would love to reuse is utilizing different AIs (Copilot, Claude, ChatGPT) to help come up with tests and help analyze and break down the code into simplified sections to better understand and read the code. One thing that I would do differently next time while working with AI is consistently running tests or edge cases to verify AI suggestions to see if they should be implemented in a project or not. This project has ultimately helped me show how useful AI can be as a smart partner/tutor by your side to help you understand and break down code into smaller pieces for comprehension. To add on, I also found AI to be super helpful in locating important parts/lines of code within a file that has a lot of lines of code in it, which can make development and programming much more faster and efficient.
